@@ -1,7 +1,7 @@
 // Import all required packages
 const notes = require ('express').Router();
 const {readFromFile, readAndAppend, writeToFile} = require('../helpers/fsUtils');
-const uuid = require('../utils/uuid');
+const uuid = require('../helpers/uuid');
 
 // GET route 
 
@@ -34,28 +34,5 @@ notes.post('/', (req, res) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-// module.exports = () { }
+module.exports = notes;
 

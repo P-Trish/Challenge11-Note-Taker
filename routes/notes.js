@@ -31,8 +31,13 @@ notes.post('/', (req, res) => {
  
 });
 
-
-
-
+// DELETE route BONUS
+notes.delete('/:id', (req, res) => {
+ console.info(`${req.method} request received for deleting notes`);
+ const {id} = req.params.id;
+ if (id) {
+    deleteAndUpdate(id, './db/db.json');
+}
+)
 module.exports = notes;
 

@@ -31,4 +31,12 @@ const readAndAppend = (content, file) => {
   });
 };
 
+// Delete file
+const deleteAndUpdateFile = (id, file) => {
+  readFromFile('./db/db.json').then((data) => {
+    const existingNotes = JSON.parse(data);
+    const filteredNotes = existingNotes.filter((note) => note.id!== id);
+    writeToFile(file, filteredNotes);
+}
+
 module.exports = { readFromFile, writeToFile, readAndAppend };

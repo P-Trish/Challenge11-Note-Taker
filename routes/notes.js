@@ -1,6 +1,6 @@
 // Import all required packages
 const notes = require ('express').Router();
-const {readFromFile, readAndAppend, writeToFile} = require('../helpers/fsUtils');
+const {readFromFile, readAndAppend, writeToFile, deleteAndUpdate} = require('../helpers/fsUtils');
 const uuid = require('../helpers/uuid');
 
 // GET route 
@@ -34,10 +34,15 @@ notes.post('/', (req, res) => {
 // DELETE route BONUS
 notes.delete('/:id', (req, res) => {
  console.info(`${req.method} request received for deleting notes`);
- const {id} = req.params.id;
+ const id = req.params.id;
  if (id) {
     deleteAndUpdate(id, './db/db.json');
+    res.json(`Note with id ${id} has been deleted`);
+ }else {
+    res.error('Error during DELETE');
 }
-)
+
+});
+
 module.exports = notes;
 

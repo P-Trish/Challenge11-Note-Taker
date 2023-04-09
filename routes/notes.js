@@ -7,6 +7,7 @@ const uuid = require('../utils/uuid');
 
 
 notes.get('/', (req, res) => {
+    console.info(`${req.method} request received for reading notes`);
     readFromFile('./db/db.json')
     .then((data) => res.json(JSON.parse(data)));
 });
@@ -14,6 +15,21 @@ notes.get('/', (req, res) => {
 
 // POST route
 
+notes.post('/', (req, res) => {
+    console.info(`${req.method} request received for creating notes`);
+    const {title, text} = req.body;
+    if (req.body) {
+        const newNote = {
+            title,
+            text,
+            id: uuid(),
+        };
+        readAndAppend(newNote, './db/db.json');
+        res.json(newNote);
+    }
+    else {res.error ('Error during POST');}
+ 
+});
 
 
 
@@ -32,6 +48,7 @@ notes.get('/', (req, res) => {
 
 
 
+ 
 
 
 

@@ -1,4 +1,6 @@
-# Challenge11-Note-Taker## Description
+# Challenge11-Note-Taker
+
+## Description
 
 Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
 
@@ -7,6 +9,7 @@ Provide a short description explaining the what, why, and how of your project. U
 - What problem does it solve?
 - What did you learn?
 
+LINK TO DEPLOYED APPLICATION: 
 
 ## Installation
 
@@ -36,8 +39,7 @@ N/A
 
 ## Features
 
-The delete note route is an added feature of the project.
-
+The delete note route has been added as a bonus feature to the project.  This allows the user to delete an existing note from the list in the left hand column.  
 
 
 ## Questions

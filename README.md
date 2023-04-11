@@ -2,12 +2,17 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+This project is a Note Taker that can be used to create, save, and retrieve notes as well as delete notes that no longer have any use for the user.  It utilizes the Express Node.js module in the back end and connects to an already existing front end created for note taking.  I created a server in the back end with routes using Express.js.  
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+The motivation behind this project is to take on the user story of: 
+"AS a small business owner
+I WANT to be able to write and save notes
+SO THAT I can organize my thoughts and keep track of tasks I need to complete."
+
+This project was built to resolve the problem of not having a catch-all for thoughts and tasks one may need to complete but cannot keep track of solely in their minds.  The Note Taker allows a place for organization so that a user can store notes, tasks, and anything that needs to be put in writing so that they can retrieve them later to be reminded or delete them if the note is no longer needed.  
+
+In developing the Note Taker, I learned how to create a back end server and routes that a user can interact with on the front end through a web browser.  I have also expanded my knowledge of back end servers and steps necessary to take for front end interaction.  
+
 
 LINK TO DEPLOYED APPLICATION: 
 
